@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 </head>
-<body>
+<body class="artist-page-body">
     <header class="header">
         <a href="../index.html">
         <div class="logo">
-            <img src="../assets/logo.png" alt="">
+            <img src="../assets/Mo-logo.png" alt="">
         </div></a>
         <nav class="nav">
             <a href="../pages/artists.html">Artists</a>
@@ -21,95 +21,70 @@
         </nav>
     </header>
 
-    <main>
-        <!-- Slider Section -->
-        <section class="artist-slider">
-            <h1>Freddy Mabitsela</h1>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="../assets/artists/freddy-mabitsela/DSC05538-Edit.jpg" alt="Freddy Mabitsela">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../assets/artists/freddy-mabitsela/DSC05525-Edit.jpg" alt="Freddy Mabitsela">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../assets/artists/freddy-mabitsela/DSC05534-Edit.jpg" alt="Freddy Mabitsela">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../assets/artists/freddy-mabitsela/DSC05541-Edit.jpg" alt="Freddy Mabitsela">
-                    </div>
-                </div>
-                <!-- Slider Navigation -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+    <main class="artist-page">
+    <div class="artist-container">
+        <!-- Left Column: Editorial Look -->
+        <div class="artist-images">
+            <!-- Large Image -->
+            <div class="large-image">
+                <img src="../assets/artists/freddy-mabitsela/DSC05538-Edit.jpg" alt="Freddy Mabitsela">
             </div>
-        </section>
-
-        <!-- Bio Section -->
-        <section class="artist-bio">
-            <h2>About Freddy “Freddy” Mabitsela</h2>
-            <p>
-                Frederick Mabitsela is an award-winning radio presenter, podcast producer, and voice artist with over 12 years of experience in broadcasting, audio production, and audience engagement. His journey began at VOW FM in 2011, where he rose from hosting the Breakfast Show to becoming the station voice—a testament to his versatility and presence behind the mic.
-
-                A skilled storyteller and audio craftsman, Frederick co-produced the acclaimed business podcast Talk with Rams alongside Rams Mabote, resonating with a wide audience through insightful, relevant content. His exceptional work was honoured with the Best Radio Feature award at the National Vodacom Journalist of the Year Awards (2017) for the gripping podcast Alibi.
-
-                With a strong focus on radio advertising and sales, Frederick brings a rare blend of creative flair and commercial savvy, making him a valuable force in any audio-driven space.
-
-            </p>
-        </section>
-
-        <!-- Languages Section -->
-        <section class="artist-languages">
-            <h2>Languages Spoken</h2>
-            <ul>
-                <li>English</li>
-                <li>Pedi</li>
-                <li>Sotho</li>
-                <li>Zulu</li>
-            </ul>
-        </section>
-
-        <!-- Audio Files Section -->
-        <section class="artist-audio">
-            <h2>Voice Samples</h2>
-            <div class="audio-container">
-                <div class="audio-file">
-                    <h3>Commercial Demo</h3>
-                    <audio controls>
-                        <source src="../assets/artists/Freddy Mabitsela/" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="audio-file">
-                    <h3>Narration Demo</h3>
-                    <audio controls>
-                        <source src="../assets/audio/freddy-narration.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="audio-file">
-                    <h3>Character Demo</h3>
-                    <audio controls>
-                        <source src="../assets/audio/freddy-character.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
+            <!-- Thumbnails -->
+            <div class="thumbnails">
+                <img src="../assets/artists/freddy-mabitsela/DSC05525-Edit.jpg" alt="Freddy Mabitsela">
+                <img src="../assets/artists/freddy-mabitsela/DSC05534-Edit.jpg" alt="Freddy Mabitsela">
+                <img src="../assets/artists/freddy-mabitsela/DSC05541-Edit.jpg" alt="Freddy Mabitsela">
             </div>
-        </section>
+        </div>
 
-        <!-- Links Section -->
-<section class="artist-links">
-    <h2>Audio-Link</h2>
-    <div class="links-container">
-        <a href="https://soundcloud.com/mo-than-just-talent/sets/freddy-mabitsela" target="_blank" class="link-item">
-            <img src="../assets/icons/soundcloud-brands-solid.svg" alt="Soundcloud">
-            Soundcloud
-        </a>
+        <!-- Right Column: Content -->
+        <div class="artist-content">
+            <!-- Bio Section -->
+            <section class="artist-bio">
+                <h2>Freddy “Freddy” Mabitsela</h2>
+                <p>
+                    Frederick Mabitsela is an award-winning radio presenter, podcast producer, and voice artist with over 12 years of experience in broadcasting, audio production, and audience engagement. His journey began at VOW FM in 2011, where he rose from hosting the Breakfast Show to becoming the station voice—a testament to his versatility and presence behind the mic.
+
+                    A skilled storyteller and audio craftsman, Frederick co-produced the acclaimed business podcast Talk with Rams alongside Rams Mabote, resonating with a wide audience through insightful, relevant content. His exceptional work was honoured with the Best Radio Feature award at the National Vodacom Journalist of the Year Awards (2017) for the gripping podcast Alibi.
+
+                    With a strong focus on radio advertising and sales, Frederick brings a rare blend of creative flair and commercial savvy, making him a valuable force in any audio-driven space.
+                </p>
+            </section>
+
+            
+
+            <!-- Audio Files Section -->
+            <section class="artist-audio">
+                
+                <div class="audio-container">
+                    <div class="audio-file">
+                        <h3>Commercial Demo</h3>
+                        <audio controls>
+                            <source src="../assets/artists/Freddy Mabitsela/" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="audio-file">
+                        <h3>Narration Demo</h3>
+                        <audio controls>
+                            <source src="../assets/audio/freddy-narration.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="audio-file">
+                        <h3>Character Demo</h3>
+                        <audio controls>
+                            <source src="../assets/audio/freddy-character.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </section>
+
+            
+        </div>
     </div>
-</section>
-    </main>
+</main>
 
     <footer class="footer">
         <div class="footer-content">
