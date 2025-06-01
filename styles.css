@@ -142,11 +142,10 @@ header {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	/*padding: 2rem;*/
+
 	background-color: #ffffff;
 	border-radius: var(--card-radius);
-	/*box-shadow: var(--card-shadow);*/
-	/*margin-top: 5vw !important;*/
+
 	margin-bottom: 2rem;
 	max-width: 1200px;
 	margin: 50px !important;
