@@ -34,7 +34,7 @@ body {
 /** NAVBAR */
 nav {
 	float: right;
-	margin-right: 60px;
+	margin-right: ;
 	font-family: "Inter Tight", montserrat;
 }
 nav a {
@@ -44,7 +44,7 @@ nav a {
 .logo img {
 	width: 100px;
 	float: left;
-	margin-left: 120px;
+	margin-left: 100px;
 }
 a {
 	text-decoration: none;
@@ -72,13 +72,13 @@ nav a:hover {
 .header-section {
 	height: 100vh;
 	background-color: var(--background-color);
-	margin-top: -10px;
 }
 header {
 	width: 100%;
 	height: 100px;
-	display: block;
-	align-items: end;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
 	padding: 1rem 2rem;
 	margin-bottom: 0px;
 	background-color: #ffffff00;
@@ -99,12 +99,12 @@ header {
 	padding: 8rem 0;
 }
 .image-display {
-	width: 500px;
+	width: 490px;
 	height: 253px;
 	display: block;
 	contain: content;
 	border-radius: 10px;
-	margin-left: 25px;
+	margin-left: 0px;
 }
 .logo-display img {
 	/*position: absolute;*/
@@ -744,6 +744,26 @@ footer {
 		margin-top: 0;
 		margin-left: 40px;
 	}
+	.header {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.logo {
+		display: none;
+	}
+	.logo-link {
+		display: none;
+	}
+	.nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+	}
 }
 
 /** 768px */
@@ -1028,45 +1048,16 @@ footer {
 }
 /* filters end */
 
-.artist-slider {
-	text-align: center;
-	padding: 2rem;
-	background-color: var(--background-color);
+.artist-bio {
+	margin: 0;
+	padding: 0;
 }
 
-.artist-slider h1 {
-	font-size: 2.5rem;
-	margin-bottom: 1rem;
-	color: var(--text-color);
-}
-
-.swiper-container {
-	width: 100%;
-	max-width: 800px;
-	margin: 0 auto;
-	position: relative; /* Ensure navigation buttons are positioned correctly */
-}
-
-.swiper-slide img {
-	width: 100%;
-	height: 80vh; /* Adjust height to make the image smaller */
-	border-radius: var(--card-radius);
-
-	object-fit: contain;
-}
-
-.swiper-pagination {
-	margin-top: 10px;
-	text-align: center;
-	position: static;
-}
-
-.artist-bio,
 .artist-languages,
 .artist-audio {
 	text-align: center;
-	padding: 2rem;
-	margin: 2rem auto;
+	padding: 0;
+	margin: 0;
 	width: 100%;
 	background-color: #fff;
 }
@@ -1074,15 +1065,17 @@ footer {
 .artist-bio h2,
 .artist-languages h2,
 .artist-audio h2 {
-	font-size: 4rem !important;
-	margin-bottom: 1rem;
+	font-size: 2rem !important;
+	margin: 0;
 	color: var(--lime2);
+	text-align: left;
 }
 
 .artist-bio p {
-	font-size: 1rem;
+	font-size: 0.9rem;
 	line-height: 1.8;
 	color: #555;
+	text-align: left;
 }
 
 .artist-languages ul {
@@ -1103,15 +1096,32 @@ footer {
 	width: 100%;
 }
 
-.audio-file h3 {
-	font-size: 1rem;
-	margin-bottom: 0.5rem;
+.audio-file {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between; /* Space out the text and audio player */
+
+	width: 10%;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.audio-file p {
+	font-size: 0.8rem !important;
 	color: var(--text-color);
+	margin: 0;
+	flex: 1; /* Allow the text to take up available space */
 }
 
 audio {
-	width: 100%;
-	border-radius: 5px;
+	width: 60%; /* Adjust the width of the audio player */
+	background-color: black; /* Make the audio player transparent */
+	border: none; /* Remove any borders */
+	outline: none; /* Remove focus outline */
+	margin: 0;
+	padding: 0;
 }
 
 .artist-links {
@@ -1422,29 +1432,59 @@ header {
 }
 
 .large-image img {
-	margin-top: 3rem;
 	width: 100%;
 	max-width: 500px; /* Optional: Limit the size of the large image */
 }
 
 .thumbnails {
-	display: flex;
-	gap: 1rem;
-	justify-content: center; /* Centers thumbnails horizontally */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* 3 thumbnails per row */
+	gap: 0.5rem; /* Space between thumbnails */
+	justify-content: center; /* Center the grid */
+	width: 100%; /* Match the width of the large image container */
+	max-width: 500px; /* Ensure it doesn't exceed the large image's max width */
 }
 
 .thumbnails img {
-	width: 80px;
-	height: auto;
-
+	width: 100%; /* Make the thumbnails fill their grid cell */
+	aspect-ratio: 1 / 1; /* Ensures the thumbnails are perfect squares */
+	object-fit: cover; /* Ensure the image fills the thumbnail */
+	object-position: top; /* Align the image to the top */
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	cursor: pointer;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.thumbnails img:hover {
-	transform: scale(1.1);
+/* Pop-up container */
+.popup {
+	display: none; /* Hidden by default */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.popup-img {
+	max-width: 90%;
+	max-height: 90%;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 2rem;
+	color: white;
+	cursor: pointer;
+	background: none;
+	border: none;
+	outline: none;
 }
 
 /* Right column: Content */
@@ -1480,24 +1520,53 @@ header {
 	gap: 1.5rem;
 }
 
-.audio-file h3 {
-	font-size: 1.2rem;
-	margin-bottom: 0.5rem;
-}
-
-.links-container {
+.audio-file {
 	display: flex;
+	flex-direction: row;
 	align-items: center;
+	justify-content: space-between; /* Space out the text and audio player */
 	gap: 1rem;
+	width: 100%;
+	padding: 0rem;
+	background-color: #e9e8e8;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.links-container a {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-	text-decoration: none;
-	color: #333;
-	font-size: 1rem;
+.audio-file p {
+	font-size: 0.9rem;
+	color: var(--text-color);
+	margin: 0;
+	flex: 1; /* Allow the text to take up available space */
+}
+
+audio {
+	width: 60%; /* Adjust the width of the audio player */
+	background-color: transparent; /* Make the audio player transparent */
+	border: none; /* Remove any borders */
+	outline: none; /* Remove focus outline */
+	margin: 0;
+	padding: 0;
+}
+
+audio::-webkit-media-controls-panel {
+	background-color: #e9e8e8; /* Make the controls panel transparent */
+	border: none;
+}
+
+audio::-webkit-media-controls-timeline {
+	background-color: transparent; /* Make the timeline transparent */
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+	color: #333; /* Set the text color for time display */
+	font-size: 0.9rem;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+	filter: invert(0) brightness(0); /* Invert colors for better visibility */
 }
 
 /* Responsive adjustments for artist page */

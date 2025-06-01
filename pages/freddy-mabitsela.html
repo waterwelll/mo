@@ -14,10 +14,10 @@
             <img src="../assets/Mo-logo.png" alt="">
         </div></a>
         <nav class="nav">
-            <a href="../pages/artists.html">Artists</a>
+            <a href="artists.html">Artists</a>
             <a href="../index.html#about">About Us</a>
             <a href="../index.html#services">Services</a>
-            <a href="../index.html#contact">Contact</a>
+            <a href="../contact-page.html">Contact</a>
         </nav>
     </header>
 
@@ -31,10 +31,16 @@
             </div>
             <!-- Thumbnails -->
             <div class="thumbnails">
-                <img src="../assets/artists/freddy-mabitsela/DSC05525-Edit.jpg" alt="Freddy Mabitsela">
-                <img src="../assets/artists/freddy-mabitsela/DSC05534-Edit.jpg" alt="Freddy Mabitsela">
-                <img src="../assets/artists/freddy-mabitsela/DSC05541-Edit.jpg" alt="Freddy Mabitsela">
+                <img src="../assets/artists/freddy-mabitsela/DSC05525-Edit.jpg" alt="Freddy Mabitsela" data-src="../assets/artists/freddy-mabitsela/DSC05525-Edit.jpg">
+                <img src="../assets/artists/freddy-mabitsela/DSC05534-Edit.jpg" alt="Freddy Mabitsela" data-src="../assets/artists/freddy-mabitsela/DSC05534-Edit.jpg">
+                <img src="../assets/artists/freddy-mabitsela/DSC05541-Edit.jpg" alt="Freddy Mabitsela" data-src="../assets/artists/freddy-mabitsela/DSC05541-Edit.jpg">
             </div>
+        </div>
+
+        <!-- Pop-up Container -->
+        <div class="popup" id="popup">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <img class="popup-img" id="popup-img" src="" alt="Popup Image">
         </div>
 
         <!-- Right Column: Content -->
@@ -58,21 +64,21 @@
                 
                 <div class="audio-container">
                     <div class="audio-file">
-                        <h3>Commercial Demo</h3>
+                        <p>Frederick Mabitsela - Soft-sell</p>
                         <audio controls>
-                            <source src="../assets/artists/Freddy Mabitsela/" type="audio/mpeg">
+                            <source src="../assets/audio/commercial-demo.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
                     </div>
                     <div class="audio-file">
-                        <h3>Narration Demo</h3>
+                        <p>Frederick Mabitsela - Hard-sell</p>
                         <audio controls>
                             <source src="../assets/audio/freddy-narration.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
                     </div>
                     <div class="audio-file">
-                        <h3>Character Demo</h3>
+                        <p>Frederick Mabitsela - Corporate</p>
                         <audio controls>
                             <source src="../assets/audio/freddy-character.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
@@ -110,7 +116,7 @@
     
         <div class="footer-contact">
         <p class="p-title"><b>Contact us:</b></p> 
-        <p>Email: example@example.com</p>
+        <p>Email: info@mothanjusttalent.com</p>
         <p>Phone: +27 69 657 4645</p>
 
         <p class="p-title"><b>Address:</b></p>
@@ -124,7 +130,7 @@
     <div class="footer-nav">
         <div class="footer-nav-items">
             <p class="p-title"><b>Explore</b></p> 
-            <p><a href="../contact-page.html">Home</a></p>
+            <p><a href="../index.html">Home</a></p>
             <p><a href="artists.html">Artist Personalities</a></p>
             <p><a href="../index.html#aboutus">About us</a></p>
             <p><a href="../index.html#services">Our Services</a></p>
